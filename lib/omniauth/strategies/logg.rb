@@ -2,8 +2,8 @@ require 'omniauth/strategies/oauth2'
 
 module OmniAuth
   module Strategies
-    class LOGG < OmniAuth::Strategies::OAuth2
-      option :name, :synctree
+    class Logg < OmniAuth::Strategies::OAuth2
+      option :name, :logg
 
       option :client_options, {
         :site => "https://logg.com",
@@ -11,15 +11,15 @@ module OmniAuth
       }
 
       uid do
-        raw_info["id"]
+        raw_info["uid"]
       end
 
       info do
         {
-          :email => raw_info["email"],
-          :name => raw_info["name"],
-          :first_name => raw_info["first_name"],
-          :last_name => raw_info["last_name"],
+          :email => raw_info["info"]["email"],
+          :name => raw_info["info"]["name"],
+          :first_name => raw_info["info"]["first_name"],
+          :last_name => raw_info["info"]["last_name"],
         }
       end
 

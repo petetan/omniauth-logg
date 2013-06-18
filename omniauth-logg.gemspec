@@ -5,7 +5,7 @@ require 'omniauth/logg/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "omniauth-logg"
-  spec.version       = Omniauth::LOGG::VERSION
+  spec.version       = Omniauth::Logg::VERSION
   spec.authors       = ["Blake Petetan"]
   spec.email         = ["blake@synctree.com"]
   spec.summary       = "LOGG strategy for OmniAuth"
